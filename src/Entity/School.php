@@ -34,9 +34,22 @@ class School
      */
     private $klas;
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Country::class, inversedBy="school")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $country;
+
+    /**
+     * @ORM\Column(type="decimal", precision=6, scale=2)
+     */
+    private $tuition;
+
     public function __construct()
     {
         $this->klas = new ArrayCollection();
+        $this->setCreatedAt(new \DateTime('now'));
+
     }
 
     public function __toString()
@@ -100,6 +113,30 @@ class School
                 $kla->setSchool(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getCountry(): ?Country
+    {
+        return $this->country;
+    }
+
+    public function setCountry(?Country $country): self
+    {
+        $this->country = $country;
+
+        return $this;
+    }
+
+    public function getTuition(): ?string
+    {
+        return $this->tuition;
+    }
+
+    public function setTuition(string $tuition): self
+    {
+        $this->tuition = $tuition;
 
         return $this;
     }

@@ -57,6 +57,12 @@ class User implements UserInterface
      */
     private $klas;
 
+    public function __construct()
+    {
+        $this->setCreatedAt(new \DateTime('now'));
+        $this->setUpdatedAt(new \DateTime('now'));
+    }
+
     public function getId(): ?int
     {
         return $this->id;
