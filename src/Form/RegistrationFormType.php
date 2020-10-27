@@ -46,8 +46,6 @@ class RegistrationFormType extends AbstractType
                 ],
             ])
             ->add('email')
-            ->add('createdAt', DateTimeType::class, [
-                'mapped' => true,])
             ->add('klas')
         ;
     }

@@ -13,9 +13,9 @@ class SchoolType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('createdAt')
             ->add('tuition')
             ->add('country')
+
         ;
     }
 

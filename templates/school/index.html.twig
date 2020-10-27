@@ -13,6 +13,7 @@
                 <th>CreatedAt</th>
                 <th>Tuition</th>
                 <th>Country</th>
+                <th>newTuition</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -24,6 +25,7 @@
                 <td>{{ school.createdAt ? school.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ school.tuition }}</td>
                 <td>{{ school.country }}</td>
+                <td>{{ tuitionCalc(school.tuition, school.country) }}</td>
                 <td>
                     <a href="{{ path('school_show', {'id': school.id}) }}">show</a>
                     <a href="{{ path('school_edit', {'id': school.id}) }}">edit</a>
