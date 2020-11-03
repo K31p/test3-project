@@ -1,28 +1,24 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}School index{% endblock %}
+{% block title %}shoppingCart{% endblock %}
 
 {% block body %}
     <h1>School index</h1>
 
     <table class="table">
         <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>CreatedAt</th>
-                <th>Tuition</th>
-                <th>Country</th>
-                <th>newTuition</th>
-                <th>actions</th>
-            </tr>
+        <tr>
+            <th>Name</th>
+            <th>Tuition</th>
+            <th>Country</th>
+            <th>newTuition</th>
+            <th>actions</th>
+        </tr>
         </thead>
         <tbody>
         {% for school in schools %}
             <tr>
-                <td>{{ school.id }}</td>
                 <td>{{ school.name }}</td>
-                <td>{{ school.createdAt ? school.createdAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ school.tuition }}</td>
                 <td>{{ school.country }}</td>
                 <td>{{ tuitionCalc(school.tuition, school.country) }}</td>
@@ -34,6 +30,5 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('school_new') }}">Create new</a>
+    <a href="{{ path('order') }}">Order</a>
 {% endblock %}

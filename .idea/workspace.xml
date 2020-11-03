@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4ac6f6-fd8f-43a3-a6fb-f9a81a32c0b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Twig/SomeService.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart_control/cart.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/routes.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/routes.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Country.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Country.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/RegistrationFormType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/SchoolType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/SchoolType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/UserType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/UserType.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Twig/AppExtension.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Klas.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Klas.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/School.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/School.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/welkom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/welkom.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/school/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/school/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +28,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="opdracht3en4/development" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -139,9 +147,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test-project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test3-project\templates\cart_control" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\test3-project" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -156,7 +172,17 @@
       <workItem from="1603442143411" duration="9059000" />
       <workItem from="1603700467069" duration="1758000" />
       <workItem from="1603728379633" duration="330000" />
-      <workItem from="1603785646703" duration="15359000" />
+      <workItem from="1603785646703" duration="15489000" />
+      <workItem from="1603879889188" duration="827000" />
+      <workItem from="1603887479817" duration="2021000" />
+      <workItem from="1603892242860" duration="615000" />
+      <workItem from="1603894069411" duration="925000" />
+      <workItem from="1603896155568" duration="60000" />
+      <workItem from="1603896385186" duration="3795000" />
+      <workItem from="1603958679573" duration="16694000" />
+      <workItem from="1604045400950" duration="14396000" />
+      <workItem from="1604074063604" duration="604000" />
+      <workItem from="1604304078886" duration="10966000" />
     </task>
     <servers />
   </component>
@@ -164,18 +190,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="844" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603444031483">
+    <state x="812" y="202" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604332467504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="844" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603444031483" />
-    <state x="789" y="170" key="FileChooserDialogImpl" timestamp="1603808060874">
+    <state x="812" y="202" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1604332467504" />
+    <state x="844" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1604331503735">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="789" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603808060874" />
-    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1603357157660">
+    <state x="844" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604331503735" />
+    <state x="789" y="170" key="FileChooserDialogImpl" timestamp="1603890551683">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1603357157660" />
+    <state x="789" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603890551683" />
+    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1604332444056">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1604332444056" />
+    <state x="864" y="339" key="NewPhpFileDialog" timestamp="1603972469047">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="864" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603972469047" />
     <state x="153" y="0" width="1028" height="615" key="dock-window-1" timestamp="1603810413516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

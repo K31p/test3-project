@@ -45,10 +45,16 @@ class School
      */
     private $tuition;
 
+    /**
+     * @ORM\OneToMany(targetEntity=TakeOrder::class, mappedBy="school", orphanRemoval=true)
+     */
+    private $takeOrder;
+
     public function __construct()
     {
         $this->klas = new ArrayCollection();
         $this->setCreatedAt(new \DateTime('now'));
+        $this->takeOrder = new ArrayCollection();
 
     }
 
@@ -137,6 +143,37 @@ class School
     public function setTuition(string $tuition): self
     {
         $this->tuition = $tuition;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|TakeOrder[]
+     */
+    public function getTakeOrder(): Collection
+    {
+        return $this->takeOrder;
+    }
+
+    public function addTakeOrder(TakeOrder $takeOrder): self
+    {
+        if (!$this->takeOrder->contains($takeOrder)) {
+            $this->takeOrder[] = $takeOrder;
+            $takeOrder->setSchool($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTakeOrder(TakeOrder $takeOrder): self
+    {
+        if ($this->takeOrder->contains($takeOrder)) {
+            $this->takeOrder->removeElement($takeOrder);
+            // set the owning side to null (unless already changed)
+            if ($takeOrder->getSchool() === $this) {
+                $takeOrder->setSchool(null);
+            }
+        }
 
         return $this;
     }

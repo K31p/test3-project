@@ -40,4 +40,7 @@ security:
         - { path: ^/niveau, roles: ROLE_USER }
         - { path: ^/les, roles: ROLE_USER }
         - { path: ^/rooster, roles: ROLE_USER }
+        - { path: ^/cart, roles: ROLE_USER }
+        - { path: ^/student, roles: ROLE_USER }
+        - { path: ^/takeOrder, roles: ROLE_USER }
         # - { path: ^/profile, roles: ROLE_USER }

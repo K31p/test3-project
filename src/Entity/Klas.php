@@ -46,10 +46,16 @@ class Klas
      */
     private $user;
 
+    /**
+     * @ORM\OneToMany(targetEntity=Student::class, mappedBy="klas")
+     */
+    private $student;
+
     public function __construct()
     {
         $this->klasHasLes = new ArrayCollection();
         $this->user = new ArrayCollection();
+        $this->student = new ArrayCollection();
     }
 
     public function __toString()
@@ -154,6 +160,37 @@ class Klas
             // set the owning side to null (unless already changed)
             if ($user->getKlas() === $this) {
                 $user->setKlas(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Student[]
+     */
+    public function getStudent(): Collection
+    {
+        return $this->student;
+    }
+
+    public function addStudent(Student $student): self
+    {
+        if (!$this->student->contains($student)) {
+            $this->student[] = $student;
+            $student->setKlas($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStudent(Student $student): self
+    {
+        if ($this->student->contains($student)) {
+            $this->student->removeElement($student);
+            // set the owning side to null (unless already changed)
+            if ($student->getKlas() === $this) {
+                $student->setKlas(null);
             }
         }
 

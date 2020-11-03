@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -57,10 +59,22 @@ class User implements UserInterface
      */
     private $klas;
 
+    /**
+     * @ORM\OneToMany(targetEntity=TakeOrder::class, mappedBy="user", orphanRemoval=true)
+     */
+    private $takeOrder;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Student::class, mappedBy="user")
+     */
+    private $student;
+
     public function __construct()
     {
         $this->setCreatedAt(new \DateTime('now'));
         $this->setUpdatedAt(new \DateTime('now'));
+        $this->takeOrder = new ArrayCollection();
+        $this->student = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -180,6 +194,68 @@ class User implements UserInterface
     public function setKlas(?Klas $klas): self
     {
         $this->klas = $klas;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|TakeOrder[]
+     */
+    public function getTakeOrder(): Collection
+    {
+        return $this->takeOrder;
+    }
+
+    public function addTakeOrder(TakeOrder $takeOrder): self
+    {
+        if (!$this->takeOrder->contains($takeOrder)) {
+            $this->takeOrder[] = $takeOrder;
+            $takeOrder->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTakeOrder(TakeOrder $takeOrder): self
+    {
+        if ($this->takeOrder->contains($takeOrder)) {
+            $this->takeOrder->removeElement($takeOrder);
+            // set the owning side to null (unless already changed)
+            if ($takeOrder->getUser() === $this) {
+                $takeOrder->setUser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Student[]
+     */
+    public function getStudent(): Collection
+    {
+        return $this->student;
+    }
+
+    public function addStudent(Student $student): self
+    {
+        if (!$this->student->contains($student)) {
+            $this->student[] = $student;
+            $student->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeStudent(Student $student): self
+    {
+        if ($this->student->contains($student)) {
+            $this->student->removeElement($student);
+            // set the owning side to null (unless already changed)
+            if ($student->getUser() === $this) {
+                $student->setUser(null);
+            }
+        }
 
         return $this;
     }

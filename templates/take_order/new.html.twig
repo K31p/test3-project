@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New TakeOrder{% endblock %}
+
+{% block body %}
+    <h1>Create new TakeOrder</h1>
+
+    {{ include('take_order/_form.html.twig') }}
+
+    <a href="{{ path('take_order_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}TakeOrder{% endblock %}
+
+{% block body %}
+    <h1>TakeOrder</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ take_order.id }}</td>
+            </tr>
+            <tr>
+                <th>PlacedAt</th>
+                <td>{{ take_order.placedAt ? take_order.placedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('take_order_index') }}">back to list</a>
+
+    <a href="{{ path('take_order_edit', {'id': take_order.id}) }}">edit</a>
+
+    {{ include('take_order/_delete_form.html.twig') }}
+{% endblock %}

@@ -3,16 +3,30 @@
 {% block title %}Welkom{% endblock %}
 
 {% block body %}
-    <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-    </style>
+    <h1>School index</h1>
 
-    <div class="example-wrapper">
-        <h1>Hello Admin ✅</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Tuition</th>
+            <th>Country</th>
+            <th>actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for school in schools %}
+            <tr>
+                <td>{{ school.name }}</td>
+                <td>{{ school.tuition }}</td>
+                <td>{{ school.country }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
-        This friendly message is coming from: Moderator
-
-        Er is /rooster, /les en /klas crud.
-    </div>
 {% endblock %}
