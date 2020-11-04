@@ -12,6 +12,14 @@
                 <td>{{ take_order.id }}</td>
             </tr>
             <tr>
+                <th>user</th>
+                <td>{{ take_order.user }}</td>
+            </tr>
+            <tr>
+                <th>school</th>
+                <td>{{ take_order.school }}</td>
+            </tr>
+            <tr>
                 <th>PlacedAt</th>
                 <td>{{ take_order.placedAt ? take_order.placedAt|date('Y-m-d H:i:s') : '' }}</td>
             </tr>

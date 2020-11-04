@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f4ac6f6-fd8f-43a3-a6fb-f9a81a32c0b7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Twig/SomeService.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/cart_control/cart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/framework.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/framework.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Klas.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Klas.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/School.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/School.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/default/welkom.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/welkom.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/school/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/school/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CartControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartControlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/take_order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/take_order/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/take_order/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/take_order/show.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="opdracht3en4/development" />
+        <entry key="$PROJECT_DIR$" value="opdracht6/development" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -183,6 +175,11 @@
       <workItem from="1604045400950" duration="14396000" />
       <workItem from="1604074063604" duration="604000" />
       <workItem from="1604304078886" duration="10966000" />
+      <workItem from="1604390337812" duration="1456000" />
+      <workItem from="1604405715103" duration="5809000" />
+      <workItem from="1604478011699" duration="196000" />
+      <workItem from="1604481573937" duration="3439000" />
+      <workItem from="1604491938556" duration="1771000" />
     </task>
     <servers />
   </component>
@@ -202,10 +199,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="789" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603890551683" />
-    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1604332444056">
+    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1604412087072">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1604332444056" />
+    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1604412087072" />
     <state x="864" y="339" key="NewPhpFileDialog" timestamp="1603972469047">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

@@ -17,6 +17,12 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class CartControlController extends AbstractController
 {
+    public function processOrder(School $school)
+    {
+        $takeorder = new TakeOrder();
+        $takeorder->setSchool($school);
+}
+
     /**
      * @Route("/cart/{school}", name="cart", methods={"GET"})
      */
