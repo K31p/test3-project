@@ -5,6 +5,7 @@ namespace App\Controller;
 
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\BrowserKit\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 
 class SessionController extends AbstractController
@@ -26,4 +27,21 @@ class SessionController extends AbstractController
             echo '<div class="flash-notice">' . $message . '</div>';
         }
     }
+
+    public function indexAction(Request $request){
+        $session = new Session();
+
+        $session->set('name', 'Admin');
+        $user = $session->get('name');
+
+        return $this->render();
+    }
+
+    public function admin(Request $request){
+        $session = new Session();
+        $session->set('name',"Jay");
+        return $this->render();
+}
+
+
 }
