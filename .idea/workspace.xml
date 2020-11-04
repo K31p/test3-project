@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f4ac6f6-fd8f-43a3-a6fb-f9a81a32c0b7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/CartControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartControlController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/take_order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/take_order/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/take_order/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/take_order/show.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="1f4ac6f6-fd8f-43a3-a6fb-f9a81a32c0b7" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -179,7 +171,7 @@
       <workItem from="1604405715103" duration="5809000" />
       <workItem from="1604478011699" duration="196000" />
       <workItem from="1604481573937" duration="3439000" />
-      <workItem from="1604491938556" duration="1771000" />
+      <workItem from="1604491938556" duration="2075000" />
     </task>
     <servers />
   </component>

@@ -3,7 +3,7 @@
 {% block title %}shoppingCart{% endblock %}
 
 {% block body %}
-    <h1>School index</h1>
+    <h1>School selection</h1>
 
     <table class="table">
         <thead>
@@ -22,6 +22,7 @@
                 <td>{{ school.tuition }}</td>
                 <td>{{ school.country }}</td>
                 <td>{{ tuitionCalc(school.tuition, school.country) }}</td>
+                <td><a href="{{ path('order', {'school': school.id}) }}"><button class="btn-primary">Order</button></a></td>
             </tr>
         {% else %}
             <tr>
@@ -30,5 +31,4 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('order') }}">Order</a>
 {% endblock %}

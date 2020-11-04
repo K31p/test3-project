@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/cart")
+ * @Route("/")
  */
 class CartControlController extends AbstractController
 {
@@ -24,7 +24,7 @@ class CartControlController extends AbstractController
 }
 
     /**
-     * @Route("/cart/{school}", name="cart", methods={"GET"})
+     * @Route("/cart", name="cart", methods={"GET"})
      */
     public function index(SchoolRepository $schoolRepository): Response
     {
@@ -34,25 +34,23 @@ class CartControlController extends AbstractController
     }
 
     /**
-     * @Route("/cart/new", name="order", methods={"GET","POST"})
+     * @Route("/order/{school}", name="order", methods={"GET","POST"})
      */
-    public function order(Request $request): Response
+    public function order($schoolId): Response
     {
         $takeOrder = new TakeOrder();
-        $form = $this->createForm(TakeOrderType::class, $takeOrder);
-        $form->handleRequest($request);
+        $user = $this->getUser();
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($takeOrder);
-            $entityManager->flush();
+        $takeOrder->setUser($user->getId());
+        $takeOrder->setSchool($schoolId);
 
-            return $this->redirectToRoute('take_order_index');
-        }
+        $entityManager = $this->getDoctrine()->getManager();
+        $entityManager->persist($takeOrder);
+        $entityManager->flush();
 
-        return $this->render('take_order/new.html.twig', [
-            'take_order' => $takeOrder,
-            'form' => $form->createView(),
+        return $this->render('default/index.html.twig', [
+            'controller' => 'test',
         ]);
+
     }
 }
