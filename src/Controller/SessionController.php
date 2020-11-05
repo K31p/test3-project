@@ -16,7 +16,7 @@ class SessionController extends AbstractController
         $session->start();
 
 // set and get session attributes
-        $session->set('name', 'Drak');
+        $session->set('name', 'Drake');
         $session->get('name');
 
 // set flash messages
@@ -31,16 +31,16 @@ class SessionController extends AbstractController
     public function indexAction(Request $request){
         $session = new Session();
 
-        $session->set('name', 'Admin');
+        $session->set('name', 'AdminSession');
         $user = $session->get('name');
 
-        return $this->render();
+        return $this->render('cart_control/cart.html.twig', ['user' => $user]);
     }
 
     public function admin(Request $request){
         $session = new Session();
         $session->set('name',"Jay");
-        return $this->render();
+        return $this->render('cart_control/cart.html.twig');
 }
 
 

@@ -2,35 +2,34 @@
 
 namespace App\Form;
 
-use App\Entity\School;
-use App\Entity\TakeOrder;
+use App\Entity\Klas;
+use App\Entity\Student;
 use App\Entity\User;
-use Doctrine\ORM\Mapping\Entity;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class TakeOrderType extends AbstractType
+class StudentType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('placedAt')
+            ->add('name')
+            ->add('klas', EntityType::class, [
+                'class' => Klas::class,
+            ])
             ->add('user', EntityType::class, [
                 'class' => User::class,
-            ])
-            ->add('school', EntityType::class, [
-                'class' => School::class,
-            ])
+            ]);
         ;
     }
 
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => TakeOrder::class,
+            'data_class' => Student::class,
         ]);
     }
 }

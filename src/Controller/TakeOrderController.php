@@ -17,13 +17,6 @@ use Doctrine\ORM\EntityManagerInterface;
  */
 class TakeOrderController extends AbstractController
 {
-    //private em;
-    public function __construct(EntityManagerInterface $em)
-    {
-        // Declare the entity mangager inside of the global variable to acces it everywhere
-        // in the controller
-        $this->em = $em;
-    }
 
     /**
      * @Route("/", name="take_order_index", methods={"GET"})

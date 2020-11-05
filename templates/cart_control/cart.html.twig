@@ -4,7 +4,14 @@
 
 {% block body %}
     <h1>School selection</h1>
-{{ user }}
+
+    <h2>Sessions</h2>
+    {#<p>{{ app.session.get('name') }}</p>
+    {{ user }}
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        {{ flashmessage }}
+    {% endfor %}#}
+
     <table class="table">
         <thead>
         <tr>
@@ -22,7 +29,7 @@
                 <td>{{ school.tuition }}</td>
                 <td>{{ school.country }}</td>
                 <td>{{ tuitionCalc(school.tuition, school.country) }}</td>
-                <td><a href="{{ path('order', {'school': school.id}) }}"><button class="btn-primary">Order</button></a></td>
+                <td><a href="{{ path('order', {'schoolId': school.id}) }}"><button class="btn-primary">Order</button></a></td>
             </tr>
         {% else %}
             <tr>

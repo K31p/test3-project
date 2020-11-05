@@ -20,7 +20,7 @@
             <tr>
                 <td>{{ take_order.id }}</td>
                 <td>{{ take_order.user }}</td>
-                <td>{{ take_order.school  }}</td>
+                <td>{{ take_order.school }}</td>
                 <td>{{ take_order.placedAt ? take_order.placedAt|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
                     <a href="{{ path('take_order_show', {'id': take_order.id}) }}">show</a>

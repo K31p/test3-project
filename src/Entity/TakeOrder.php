@@ -23,16 +23,15 @@ class TakeOrder
     private $placedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity=User::class, inversedBy="takeOrder")
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $user;
-
-    /**
      * @ORM\ManyToOne(targetEntity=School::class, inversedBy="takeOrder")
      * @ORM\JoinColumn(nullable=false)
      */
     private $school;
+
+    public function __toString()
+    {
+        return (string) $this->getName();
+    }
 
     public function getId(): ?int
     {
@@ -53,7 +52,7 @@ class TakeOrder
 
     public function getUser(): ?User
     {
-        return $this->user;
+        return $this-> $user;
     }
 
     public function setUser(?User $user): self
@@ -62,6 +61,7 @@ class TakeOrder
 
         return $this;
     }
+
 
     public function getSchool(): ?School
     {
