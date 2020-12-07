@@ -20,6 +20,8 @@ class TakeOrderController extends AbstractController
 
     /**
      * @Route("/", name="take_order_index", methods={"GET"})
+     * @param TakeOrderRepository $takeOrderRepository
+     * @return Response
      */
     public function index(TakeOrderRepository $takeOrderRepository): Response
     {
@@ -30,6 +32,8 @@ class TakeOrderController extends AbstractController
 
     /**
      * @Route("/new", name="take_order_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -53,6 +57,8 @@ class TakeOrderController extends AbstractController
 
     /**
      * @Route("/{id}", name="take_order_show", methods={"GET"})
+     * @param TakeOrder $takeOrder
+     * @return Response
      */
     public function show(TakeOrder $takeOrder): Response
     {
@@ -63,6 +69,9 @@ class TakeOrderController extends AbstractController
 
     /**
      * @Route("/{id}/edit", name="take_order_edit", methods={"GET","POST"})
+     * @param Request $request
+     * @param TakeOrder $takeOrder
+     * @return Response
      */
     public function edit(Request $request, TakeOrder $takeOrder): Response
     {
@@ -83,6 +92,9 @@ class TakeOrderController extends AbstractController
 
     /**
      * @Route("/{id}", name="take_order_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param TakeOrder $takeOrder
+     * @return Response
      */
     public function delete(Request $request, TakeOrder $takeOrder): Response
     {

@@ -3,39 +3,37 @@
 namespace App\Controller;
 
 use App\Entity\School;
-use App\Entity\TakeOrder;
 use App\Entity\User;
-use App\Form\SchoolType;
-use App\Form\TakeOrderType;
+use App\Entity\Order;
 use App\Repository\SchoolRepository;
+use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Session\SessionInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
 
-/**
- * @Route("/")
- */
+
 class CartControlController extends AbstractController
 {
-    public function processOrder(School $school)
+
+    private SessionInterface $session;
+
+    public function __constructor(SessionInterface $session,  EntityManagerInterface $entityManager)
     {
-        $takeorder = new TakeOrder();
-        $takeorder->setSchool($school);
+        $this->session = $session;
+        $this -> getDoctrine()-> getEntityManager();
     }
 
-    public function indexAction(Request $request){
-        $session = new Session();
-
-        $session->set('name', 'Admin');
-        $user = $session->get('name');
-
-        return $this->render('cart_control/cart.html.twig',['user' => $user]);
+    public function processOrder(School $school)
+    {
+        $order = new Order;
+        $order->setSchool($school);
     }
 
     /**
      * @Route("/cart", name="cart", methods={"GET"})
+     * @param SchoolRepository $schoolRepository
+     * @return Response
      */
     public function index(SchoolRepository $schoolRepository): Response
     {
@@ -45,27 +43,33 @@ class CartControlController extends AbstractController
     }
 
     /**
-     * @Route("/order/{schoolId}", name="order", methods={"GET","POST"})
-     * @param $schoolId
+     * @Route("/product/buy", name="cart_buy", methods={"GET"})
+     * @param SchoolRepository $schoolRepository
      * @return Response
      */
-    public function order($schoolId): Response
+    public function product(SchoolRepository $schoolRepository): Response
     {
-        $takeOrder = new TakeOrder();
-        $user = $this->getUser();
-        $takeOrder->setUser($user);
 
-
-        $takeOrder->setUser($user->getId());
-        $takeOrder->setSchool($schoolId);
-
-        $entityManager = $this->getDoctrine()->getManager();
-        $entityManager->persist($takeOrder);
-        $entityManager->flush();
-
-        return $this->render('take_order/index.html.twig', [
-            'controller' => 'test',
+            return $this->render('cart_control/order.html.twig', [
+            'schools' => $schoolRepository->findAll(),
         ]);
-
     }
+
+    /**
+     * @Route("/new/{id}", name="take_order_new")
+     * @param School $school
+     * @param User $user
+     * @return Response
+     */
+    public function order(School $school, User $user)
+    {
+
+
+        return $this->render('take_order/new.html.twig',[
+            'schools' => $school,
+        ]);
+    }
+
+
+
 }

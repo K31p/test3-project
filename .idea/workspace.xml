@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:opdracht5" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1f4ac6f6-fd8f-43a3-a6fb-f9a81a32c0b7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/OrderController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart_control/order.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/cart_control/products.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/CartControlController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CartControlController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SchoolController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SchoolController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/SessionController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SessionController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/TakeOrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Student.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Student.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/TakeOrder.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/TakeOrder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Form/TakeOrderType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/TakeOrderType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/cart_control/cart.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart_control/cart.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/take_order/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/take_order/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/cart_control/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cart_control/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +52,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="opdracht6/development" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,6 +170,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -186,11 +219,43 @@
       <workItem from="1604506285478" duration="682000" />
       <workItem from="1604563746431" duration="296000" />
       <workItem from="1604565238264" duration="19294000" />
+      <workItem from="1604669695560" duration="3653000" />
+      <workItem from="1604909352348" duration="9202000" />
+      <workItem from="1604995069228" duration="11301000" />
+      <workItem from="1605080875091" duration="11114000" />
+      <workItem from="1605173651976" duration="2482000" />
+      <workItem from="1605178992839" duration="2414000" />
+      <workItem from="1605255030442" duration="12014000" />
+      <workItem from="1605514433236" duration="12039000" />
+      <workItem from="1605600629520" duration="2134000" />
+      <workItem from="1605691021643" duration="18507000" />
+      <workItem from="1605734524830" duration="3287000" />
+      <workItem from="1605774721850" duration="6066000" />
+      <workItem from="1605861916811" duration="6446000" />
+      <workItem from="1606118500417" duration="3073000" />
+      <workItem from="1606221798845" duration="607000" />
+      <workItem from="1606733697894" duration="889000" />
+      <workItem from="1606827426803" duration="13000" />
+      <workItem from="1606998095128" duration="651000" />
+      <workItem from="1607076081830" duration="3386000" />
+      <workItem from="1607333415375" duration="1773000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="812" y="202" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604332467504">
@@ -201,21 +266,33 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="844" y="170" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604586262708" />
-    <state x="789" y="170" key="FileChooserDialogImpl" timestamp="1603890551683">
+    <state x="874" y="328" key="ComposerInitDialogKey" timestamp="1605698398427">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="789" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1603890551683" />
-    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1604412087072">
+    <state x="874" y="328" key="ComposerInitDialogKey/0.0.1536.824@0.0.1536.824" timestamp="1605698398427" />
+    <state x="789" y="170" key="FileChooserDialogImpl" timestamp="1606998747776">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1604412087072" />
-    <state x="864" y="339" key="NewPhpFileDialog" timestamp="1603972469047">
+    <state x="789" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606998747776" />
+    <state x="682" y="150" key="IDE.errors.dialog" timestamp="1605023626243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="864" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1603972469047" />
+    <state x="682" y="150" key="IDE.errors.dialog/0.0.1536.824@0.0.1536.824" timestamp="1605023626243" />
+    <state x="958" y="138" key="NewPhpClassDialog" timestamp="1607078304600">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="958" y="138" key="NewPhpClassDialog/0.0.1536.824@0.0.1536.824" timestamp="1607078304600" />
+    <state x="864" y="339" key="NewPhpFileDialog" timestamp="1605104288821">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="864" y="339" key="NewPhpFileDialog/0.0.1536.824@0.0.1536.824" timestamp="1605104288821" />
     <state x="153" y="0" width="1028" height="615" key="dock-window-1" timestamp="1603810413516">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="153" y="0" width="1028" height="615" key="dock-window-1/0.0.1536.824@0.0.1536.824" timestamp="1603810413516" />
+    <state x="967" y="184" key="refactoring.ChangeSignatureDialog" timestamp="1605698170590">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="967" y="184" key="refactoring.ChangeSignatureDialog/0.0.1536.824@0.0.1536.824" timestamp="1605698170590" />
   </component>
 </project>

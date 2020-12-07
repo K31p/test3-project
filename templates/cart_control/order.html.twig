@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Cart{% endblock %}
+{% block title %}School{% endblock %}
 
 {% block body %}
-    <h1>School selection</h1>
+    <h1>Order School</h1>
 
     <table class="table">
         <thead>
@@ -12,7 +12,6 @@
             <th>Tuition</th>
             <th>Country</th>
             <th>newTuition</th>
-            <th>actions</th>
         </tr>
         </thead>
         <tbody>
@@ -22,7 +21,6 @@
                 <td>{{ school.tuition }}</td>
                 <td>{{ school.country }}</td>
                 <td>{{ tuitionCalc(school.tuition, school.country) }}</td>
-                <td><a href="{{ path('take_order_new', {'id': school.id}, {'user': user} ) }}"><button class="btn-primary">Order</button></a></td>
             </tr>
         {% else %}
             <tr>
@@ -30,5 +28,6 @@
             </tr>
         {% endfor %}
         </tbody>
-    </table>
+        </table>
+    <td><a href="{{ path('cart_buy') }}"><button class="btn-primary">Bestellen</button></a></td>
 {% endblock %}

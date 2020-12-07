@@ -17,6 +17,8 @@ class SchoolController extends AbstractController
 {
     /**
      * @Route("/", name="school_index", methods={"GET"})
+     * @param SchoolRepository $schoolRepository
+     * @return Response
      */
     public function index(SchoolRepository $schoolRepository): Response
     {
@@ -27,6 +29,8 @@ class SchoolController extends AbstractController
 
     /**
      * @Route("/new", name="school_new", methods={"GET","POST"})
+     * @param Request $request
+     * @return Response
      */
     public function new(Request $request): Response
     {
@@ -50,6 +54,8 @@ class SchoolController extends AbstractController
 
     /**
      * @Route("/{id}", name="school_show", methods={"GET"})
+     * @param School $school
+     * @return Response
      */
     public function show(School $school): Response
     {
@@ -80,6 +86,9 @@ class SchoolController extends AbstractController
 
     /**
      * @Route("/{id}", name="school_delete", methods={"DELETE"})
+     * @param Request $request
+     * @param School $school
+     * @return Response
      */
     public function delete(Request $request, School $school): Response
     {
